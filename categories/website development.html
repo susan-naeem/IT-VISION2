@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Freelancer Search</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="bg-light">
+
+  <!-- Header -->
+  <div class="container py-4">
+    <h2 class="mb-3">Search for Website Development</h2>
+
+    <!-- Search Bar -->
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search services..." id="searchInput">
+      <button class="btn btn-primary" id="searchBtn">Search</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="mb-3 d-flex gap-2 flex-wrap">
+      <select class="form-select w-auto">
+        <option>Category</option>
+        <option>Website</option>
+        <option>Graphics</option>
+      </select>
+
+      <select class="form-select w-auto">
+        <option>Budget</option>
+        <option>$5 - $50</option>
+        <option>$50 - $100</option>
+      </select>
+
+      <select class="form-select w-auto">
+        <option>Delivery Time</option>
+        <option>24 Hours</option>
+        <option>3 Days</option>
+      </select>
+    </div>
+
+    <!-- Suggested Tags -->
+    <div class="mb-4">
+      <span class="badge bg-secondary me-2">Startup</span>
+      <span class="badge bg-secondary me-2">Party Rental</span>
+      <span class="badge bg-secondary me-2">Etsy</span>
+    </div>
+
+    <!-- Freelancers Grid -->
+    <div class="row" id="freelancerList">
+      <!-- Example Freelancer Card -->
+      <div class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <img src="https://via.placeholder.com/300x150" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Responsive WordPress Design</h5>
+            <p class="card-text text-muted">By Carol W - Level 1</p>
+            <button class="btn btn-sm btn-outline-primary w-100">View Service</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate and change content for more cards -->
+    </div>
+  </div>
+
+  <!-- jQuery (for example interactions) -->
+  <script>
+    $('#searchBtn').on('click', function () {
+      const term = $('#searchInput').val();
+      alert('Searching for: ' + term); // You can replace with actual search function
+    });
+  </script>
+
+</body>
+</html>
