@@ -1,0 +1,148 @@
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Marketing - Boost Your Brand</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .hero-section {
+      background: linear-gradient(to right, #d62929, #ff5f5f);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+    .category-box {
+      border: 1px solid #eee;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    .category-box:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+  </style>
+  <div class="hero-section">
+  <h1>Digital Marketing</h1>
+  <p>Build your brand. Grow your business.</p>
+  <button class="btn btn-light mt-3">How It Works</button>
+</div>
+</head>
+<body> -->
+
+
+
+  <!-- Add these in your HTML <head> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Marketing - Fiverr Style</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .gig-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+    .gig-card:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    .gig-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+     <a class="navbar-brand" href="#">FiverrClone</a> 
+    <form class="d-flex ms-auto">
+      <input class="form-control me-2" type="search" placeholder="Search services">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="bg-primary text-white text-center p-5">
+  <h1>Digital Marketing Services</h1>
+  <p>Boost your business with top-rated marketing experts</p>
+</div>
+
+<!-- Categories Filter -->
+<div class="container mt-4">
+  <div class="d-flex gap-3 flex-wrap justify-content-center">
+    <button class="btn btn-outline-secondary filter-btn" data-category="all">All</button>
+    <button class="btn btn-outline-secondary filter-btn" data-category="seo">SEO</button>
+    <button class="btn btn-outline-secondary filter-btn" data-category="smm">Social Media</button>
+    <button class="btn btn-outline-secondary filter-btn" data-category="email">Email Marketing</button>
+  </div>
+</div>
+
+<!-- Services Grid -->
+<div class="container mt-4">
+  <div class="row" id="serviceGrid">
+    
+    <!-- Example Card -->
+    <div class="col-md-4 gig-card" data-category="seo">
+      <img src="https://via.placeholder.com/400x200" class="gig-img" alt="Gig Image">
+      <h5 class="mt-2">I will improve your SEO ranking</h5>
+      <p>⭐⭐⭐⭐☆ (120)</p>
+      <strong>$50</strong>
+    </div>
+
+    <div class="col-md-4 gig-card" data-category="smm">
+      <img src="https://via.placeholder.com/400x200" class="gig-img" alt="Gig Image">
+      <h5 class="mt-2">I will manage your social media</h5>
+      <p>⭐⭐⭐⭐⭐ (200)</p>
+      <strong>$70</strong>
+    </div>
+
+    <div class="col-md-4 gig-card" data-category="email">
+      <img src="https://via.placeholder.com/400x200" class="gig-img" alt="Gig Image">
+      <h5 class="mt-2">I will create email campaigns</h5>
+      <p>⭐⭐⭐⭐☆ (90)</p>
+      <strong>$40</strong>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3 mt-5">
+  &copy; 2025 FiverrClone - Digital Marketing Page
+</footer>
+
+<!-- jQuery Filtering Script -->
+<script>
+  $(document).ready(function() {
+    $('.filter-btn').click(function() {
+      let category = $(this).data('category');
+      if (category === 'all') {
+        $('.gig-card').show();
+      } else {
+        $('.gig-card').hide();
+        $(.gig-card[data-category='${category}']).show();
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
